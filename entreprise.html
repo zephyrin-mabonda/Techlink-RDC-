@@ -16,7 +16,41 @@
             margin: 0;
             padding: 0;
         }
-<style>
+.entreprise-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0b5ed7, #00a8ff);
+    color: white;
+}
+
+.entreprise-hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.entreprise-hero p {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.entreprise-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.entreprise-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.entreprise-card h2 {
+    color: #0b5ed7;
+}
+        <style>
     nav {
         background: #0b5ed7;
         padding: 15px;
@@ -29,7 +63,41 @@
         margin: 0 10px;
         font-weight: bold;
     }
+<section class="entreprise-hero">
+    <h1>🏢 Mon entreprise</h1>
+    <p>
+        Une vision tournée vers la technologie, l'innovation
+        et les solutions informatiques.
+    </p>
+</section>
 
+<div class="entreprise-content">
+
+    <div class="entreprise-card">
+        <h2>🚀 Notre vision</h2>
+        <p>
+            Développer des solutions informatiques modernes,
+            accessibles et adaptées aux besoins des utilisateurs.
+        </p>
+    </div>
+
+    <div class="entreprise-card">
+        <h2>💻 Nos domaines</h2>
+        <p>
+            Développement web, réseaux informatiques,
+            maintenance informatique et solutions numériques.
+        </p>
+    </div>
+
+    <div class="entreprise-card">
+        <h2>🎯 Notre objectif</h2>
+        <p>
+            Utiliser la technologie pour créer des solutions
+            utiles, efficaces et innovantes.
+        </p>
+    </div>
+
+</div>
     nav a:hover {
         text-decoration: underline;
     }
