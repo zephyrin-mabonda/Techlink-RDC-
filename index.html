@@ -4,42 +4,247 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TechLink RDC</title>
+    <title>TechLink RDC | Services informatiques</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0b3d91;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        .hero {
+            background: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #0b3d91;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #555;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #0b3d91;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #e9eef8;
+            color: #0b3d91;
+        }
+
+        .section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0b3d91;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #0b3d91;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .about {
+            background: #0b3d91;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .about h2 {
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        footer {
+            background: #101828;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 25px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
         <h1>TechLink RDC</h1>
-
-        <p>
-            La plateforme qui met en relation les entreprises
-            avec des professionnels informatiques.
-        </p>
+        <p>La technologie au service des entreprises en RDC 🇨🇩</p>
     </header>
 
-    <main>
+    <section class="hero">
 
-        <h2>De quel service avez-vous besoin ?</h2>
+        <h2>Trouvez le professionnel informatique dont votre entreprise a besoin.</h2>
 
-        <button>Je cherche un informaticien</button>
+        <p>
+            TechLink RDC met en relation les entreprises avec des
+            professionnels informatiques selon leurs besoins.
+        </p>
 
-        <button>Je suis informaticien</button>
+        <div class="buttons">
+            <a href="#" class="btn btn-primary">
+                Je cherche un informaticien
+            </a>
+
+            <a href="#" class="btn btn-secondary">
+                Je suis informaticien
+            </a>
+        </div>
+
+    </section>
+
+    <section class="section">
 
         <h2>Nos services</h2>
 
-        <ul>
-            <li>Développement web</li>
-            <li>Réseaux informatiques</li>
-            <li>Maintenance informatique</li>
-            <li>Cybersécurité</li>
-            <li>Assistance technique</li>
-        </ul>
+        <div class="services">
 
-    </main>
+            <div class="card">
+                <h3>💻 Développement web</h3>
+                <p>
+                    Création et amélioration de sites et solutions web.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌐 Réseaux informatiques</h3>
+                <p>
+                    Installation, configuration et maintenance des réseaux.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🛠️ Maintenance</h3>
+                <p>
+                    Assistance et maintenance des équipements informatiques.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🔐 Cybersécurité</h3>
+                <p>
+                    Protection et accompagnement en matière de sécurité informatique.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📞 Assistance technique</h3>
+                <p>
+                    Aide technique pour résoudre vos problèmes informatiques.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Pourquoi TechLink RDC ?</h2>
+
+        <p>
+            Notre objectif est de faciliter la rencontre entre les entreprises
+            qui recherchent des compétences informatiques et les professionnels
+            capables de répondre à leurs besoins.
+        </p>
+
+    </section>
 
     <footer>
-        <p>© 2026 TechLink RDC</p>
+        <p>© 2026 TechLink RDC — Tous droits réservés.</p>
     </footer>
 
 </body>
