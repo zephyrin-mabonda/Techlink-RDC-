@@ -1,83 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>TechLink RDC | Demande de service</title>
-<nav>
-    <a href="index.html">🏠 Accueil</a>
-    <a href="entreprise.html">🏢 Entreprise</a>
-    <a href="informaticien.html">👨‍💻 Je suis informaticien</a>
-</nav>
+
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-.entreprise-hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #0b5ed7, #00a8ff);
-    color: white;
-}
 
-.entreprise-hero h1 {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.entreprise-hero p {
-    font-size: 19px;
-    line-height: 1.6;
-}
-
-.entreprise-content {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-}
-
-.entreprise-card {
-    background: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-}
-
-.entreprise-card h2 {
-    color: #0b5ed7;
-}
-        <style>
-    nav {
-        background: #0b5ed7;
-        padding: 15px;
-        text-align: center;
-    }
-
-    nav a {
-        color: white;
-        
-        text-decoration: none;
-        margin: 0 10px;
-        font-weight: bold;
-    }
-<section class="entreprise-hero">
-    <h1>🏢 Mon entreprise</h1>
-    <p>
-        Une vision tournée vers la technologie, l'innovation
-        et les solutions informatiques.
-    </p>
-    nav a:hover {
-        text-decoration: underline;
-    }
-</style>
         body {
             font-family: Arial, sans-serif;
             background: #f5f7fb;
             color: #172033;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #101828;
+            padding: 15px 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00a8ff;
         }
 
         header {
@@ -91,6 +49,24 @@
             margin-bottom: 8px;
         }
 
+        .entreprise-hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0b5ed7, #00a8ff);
+            color: white;
+        }
+
+        .entreprise-hero h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .entreprise-hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+        }
+
         .container {
             max-width: 700px;
             margin: 35px auto;
@@ -99,7 +75,7 @@
 
         .form-card {
             background: white;
-            padding: 25px;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
@@ -149,32 +125,66 @@
             cursor: pointer;
         }
 
+        button:hover {
+            background: #0b5ed7;
+        }
+
         .back {
             display: block;
             text-align: center;
             margin-top: 20px;
             color: #0b3d91;
             text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .entreprise-hero h2 {
+                font-size: 28px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .form-card {
+                padding: 22px;
+            }
         }
     </style>
-    
+
 </head>
 
 <body>
+
+    <nav>
+        <a href="index.html">🏠 Accueil</a>
+        <a href="entreprise.html">🏢 Entreprise</a>
+        <a href="informaticien.html">👨‍💻 Informaticien</a>
+    </nav>
 
     <header>
         <h1>TechLink RDC</h1>
         <p>Demande de service informatique</p>
     </header>
-<section class="entreprise-hero">
-    <h1>🏢 Vous êtes une entreprise ?</h1>
-    <p>
-        Trouvez un informaticien adapté à vos besoins
-        et développez vos solutions numériques.
-    </p>
-</section>
 
-<main class="container">
+    <section class="entreprise-hero">
+
+        <h2>🏢 Vous êtes une entreprise ?</h2>
+
+        <p>
+            Trouvez un informaticien adapté à vos besoins
+            et développez vos solutions numériques.
+        </p>
+
+    </section>
+
     <main class="container">
 
         <div class="form-card">
@@ -189,6 +199,7 @@
             <form>
 
                 <label for="entreprise">Nom de l'entreprise</label>
+
                 <input
                     type="text"
                     id="entreprise"
@@ -198,6 +209,7 @@
                 >
 
                 <label for="email">Adresse e-mail</label>
+
                 <input
                     type="email"
                     id="email"
@@ -207,6 +219,7 @@
                 >
 
                 <label for="telephone">Téléphone</label>
+
                 <input
                     type="tel"
                     id="telephone"
@@ -264,7 +277,7 @@
                 ></textarea>
 
                 <button type="submit">
-                    Envoyer ma demande
+                    📩 Envoyer ma demande
                 </button>
 
             </form>
@@ -278,4 +291,5 @@
     </main>
 
 </body>
-</html>
+
+                    </html>
