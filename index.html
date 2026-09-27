@@ -1,28 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>TechLink RDC | Services informatiques</title>
-<nav>
-    <a href="index.html">🏠 Accueil</a>
-    <a href="entreprise.html">🏢 Entreprise</a>
-    <a href="informaticien.html">👨‍💻 Je suis informaticien</a>
-<section class="hero">
-    <h1>Bienvenue sur mon site</h1>
 
-    <p>
-        Je suis <strong>MABONDA KIFWAMBA ZEPHYRIN</strong>,
-        étudiant en informatique et passionné par les technologies,
-        les réseaux et le développement web.
-    </p>
-
-    <a href="informaticien.html" class="btn">
-        👨‍💻 Découvrir mon profil
-    </a>
-</section>
-</nav>
     <style>
         * {
             margin: 0;
@@ -37,38 +21,55 @@
             line-height: 1.6;
         }
 
+        nav {
+            background: #101828;
+            padding: 15px 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00a8ff;
+        }
+
         header {
             background: #0b3d91;
             color: white;
-            padding: 20px;
+            padding: 35px 20px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 30px;
+            font-size: 32px;
             margin-bottom: 8px;
         }
 
         header p {
-            font-size: 15px;
+            font-size: 16px;
         }
 
         .hero {
-            background: white;
-            padding: 50px 20px;
+            background: linear-gradient(135deg, #0b5ed7, #00a8ff);
+            color: white;
             text-align: center;
+            padding: 70px 20px;
         }
 
         .hero h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-            color: #0b3d91;
+            font-size: 38px;
+            margin-bottom: 18px;
         }
 
         .hero p {
-            max-width: 650px;
+            max-width: 700px;
             margin: 0 auto 25px;
-            color: #555;
+            font-size: 18px;
         }
 
         .buttons {
@@ -84,30 +85,29 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            border: none;
-            cursor: pointer;
         }
 
         .btn-primary {
-            background: #0b3d91;
-            color: white;
+            background: white;
+            color: #0b5ed7;
         }
 
         .btn-secondary {
-            background: #e9eef8;
-            color: #0b3d91;
+            background: #101828;
+            color: white;
         }
 
         .section {
-            padding: 40px 20px;
+            padding: 50px 20px;
             max-width: 1000px;
             margin: auto;
         }
 
         .section h2 {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: #0b3d91;
+            font-size: 30px;
         }
 
         .services {
@@ -138,7 +138,7 @@
             background: #0b3d91;
             color: white;
             text-align: center;
-            padding: 45px 20px;
+            padding: 50px 20px;
         }
 
         .about h2 {
@@ -159,12 +159,26 @@
         }
 
         @media (max-width: 600px) {
-            .hero h2 {
-                font-size: 25px;
+
+            nav a {
+                display: block;
+                margin: 10px 0;
             }
 
             header h1 {
-                font-size: 25px;
+                font-size: 27px;
+            }
+
+            .hero {
+                padding: 55px 18px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
             }
 
             .btn {
@@ -172,37 +186,16 @@
                 max-width: 300px;
             }
         }
-        .hero {
-    text-align: center;
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #0b5ed7, #00a8ff);
-    color: white;
-}
-
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 20px;
-    line-height: 1.6;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 13px 25px;
-    background: white;
-    color: #0b5ed7;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
     </style>
 </head>
 
 <body>
+
+    <nav>
+        <a href="index.html">🏠 Accueil</a>
+        <a href="entreprise.html">🏢 Entreprise</a>
+        <a href="informaticien.html">👨‍💻 Informaticien</a>
+    </nav>
 
     <header>
         <h1>TechLink RDC</h1>
@@ -211,21 +204,23 @@
 
     <section class="hero">
 
-        <h2>Trouvez le professionnel informatique dont votre entreprise a besoin.</h2>
+        <h2>Bienvenue sur TechLink RDC</h2>
 
         <p>
-            TechLink RDC met en relation les entreprises avec des
-            professionnels informatiques selon leurs besoins.
+            Nous facilitons la mise en relation entre les entreprises
+            et les professionnels informatiques selon leurs besoins.
         </p>
 
         <div class="buttons">
-            <a href="#" class="btn btn-primary">
-                Je cherche un informaticien
+
+            <a href="entreprise.html" class="btn btn-primary">
+                🏢 Je cherche un informaticien
             </a>
 
-            <a href="#" class="btn btn-secondary">
-                Je suis informaticien
+            <a href="informaticien.html" class="btn btn-secondary">
+                👨‍💻 Je suis informaticien
             </a>
+
         </div>
 
     </section>
@@ -292,4 +287,5 @@
     </footer>
 
 </body>
-</html>
+
+    </html>
