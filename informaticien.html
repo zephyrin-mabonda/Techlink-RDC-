@@ -3,73 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Je suis informaticien - Zephyrin Mabonda</title>
 
     <style>
-        <nav>
-    <a href="index.html">🏠 Accueil</a>
-    <a href="entreprise.html">🏢 Entreprise</a>
-    <a href="informaticien.html">👨‍💻 Je suis informaticien</a>
-</nav>
-        <section class="card">
-    <h2>👨‍💻 Qui suis-je ?</h2>
-
-    <p>
-        Je suis <strong>MABONDA KIFWAMBA ZEPHYRIN</strong>,
-        étudiant en informatique et passionné par les technologies.
-        Je m'intéresse particulièrement aux réseaux informatiques,
-        au développement web et à la maintenance informatique.
-    </p>
-
-    <p>
-        Mon objectif est de développer mes compétences et de construire
-        progressivement mon parcours dans le domaine informatique.
-    </p>
-</section>
-
-<section class="card">
-    <h2>🛠️ Mes services</h2>
-
-    <div class="skills">
-        <div class="skill">🌐 Développement web</div>
-        <div class="skill">🖧 Réseaux informatiques</div>
-        <div class="skill">🔧 Maintenance informatique</div>
-        <div class="skill">🔐 Cybersécurité</div>
-        <div class="skill">🛠️ Assistance technique</div>
-    </div>
-</section>
-
-<section class="card">
-    <h2>🎯 Mon objectif</h2>
-
-    <p>
-        Mon objectif est de devenir un informaticien compétent,
-        capable de concevoir, installer, maintenir et sécuriser
-        des solutions informatiques adaptées aux besoins des utilisateurs.
-    </p>
-
-    <p>
-        Je souhaite continuer à apprendre, développer mes compétences
-        et évoluer dans le domaine des réseaux, du développement web
-        et des technologies informatiques
-      </p>
-        <section class="card">
-    <h2>📞 Me contacter</h2>
-
-    <p>
-        Vous souhaitez échanger avec moi, poser une question ou discuter
-        d'un projet informatique ? N'hésitez pas à me contacter.
-    </p>
-
-    <a href="mailto:zephyrinmabonda767@gmail.com" class="button">
-        📧 Me contacter
-    </a>
-</section>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: #f4f8fc;
             color: #222;
+        }
+
+        nav {
+            background: #111;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #0b5ed7;
         }
 
         header {
@@ -115,4 +74,144 @@
 
         .skill {
             background: #eaf2ff;
-            padding: 
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0b5ed7;
+            color: white;
+            padding: 12px 22px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background: #084298;
+        }
+
+        footer {
+            text-align: center;
+            background: #111;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">🏠 Accueil</a>
+        <a href="entreprise.html">🏢 Entreprise</a>
+        <a href="informaticien.html">👨‍💻 Informaticien</a>
+    </nav>
+
+    <header>
+        <h1>👨‍💻 Je suis informaticien</h1>
+        <p>MABONDA KIFWAMBA ZEPHYRIN</p>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>👨‍💻 Qui suis-je ?</h2>
+
+            <p>
+                Je suis <strong>MABONDA KIFWAMBA ZEPHYRIN</strong>,
+                étudiant en informatique et passionné par les technologies.
+                Je m'intéresse particulièrement aux réseaux informatiques,
+                au développement web et à la maintenance informatique.
+            </p>
+
+            <p>
+                Mon objectif est de développer mes compétences et de construire
+                progressivement mon parcours dans le domaine informatique.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>🛠️ Mes services</h2>
+
+            <div class="skills">
+
+                <div class="skill">
+                    🌐 Développement web
+                </div>
+
+                <div class="skill">
+                    🖧 Réseaux informatiques
+                </div>
+
+                <div class="skill">
+                    🔧 Maintenance informatique
+                </div>
+
+                <div class="skill">
+                    🔐 Cybersécurité
+                </div>
+
+                <div class="skill">
+                    🛠️ Assistance technique
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🎯 Mon objectif</h2>
+
+            <p>
+                Mon objectif est de devenir un informaticien compétent,
+                capable de concevoir, installer, maintenir et sécuriser
+                des solutions informatiques adaptées aux besoins des utilisateurs.
+            </p>
+
+            <p>
+                Je souhaite continuer à apprendre, développer mes compétences
+                et évoluer dans le domaine des réseaux, du développement web
+                et des technologies informatiques.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>📞 Me contacter</h2>
+
+            <p>
+                Vous souhaitez échanger avec moi, poser une question ou discuter
+                d'un projet informatique ? N'hésitez pas à me contacter.
+            </p>
+
+            <a href="mailto:zephyrinmabonda767@gmail.com" class="button">
+                📧 Me contacter
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 MABONDA KIFWAMBA ZEPHYRIN - Tous droits réservés.</p>
+    </footer>
+
+</body>
+                </html>
