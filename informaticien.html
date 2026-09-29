@@ -3,268 +3,236 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TechLink RDC | Informaticien</title>
+<title>TechLink RDC | Informaticien</title>
 
-    <style>
+<style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f8fc;
-            color: #172033;
-            line-height: 1.6;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8fc;
+    color: #172033;
+    line-height: 1.6;
+}
 
-        /* NAVIGATION */
+/* NAVIGATION */
 
-        nav {
-            background: #101828;
-            padding: 15px;
-            text-align: center;
-        }
+nav {
+    background: #101828;
+    padding: 15px;
+    text-align: center;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
 
-        nav a:hover {
-            color: #00a8ff;
-        }
+nav a:hover {
+    color: #00a8ff;
+}
 
-        /* HEADER */
+/* HEADER */
 
-        header {
-            background: linear-gradient(135deg, #0b3d91, #00a8ff);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+header {
+    background: linear-gradient(135deg, #0b3d91, #00a8ff);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
 
-        header h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
 
-        header p {
-            font-size: 18px;
-        }
+header p {
+    font-size: 18px;
+}
 
-        /* SECTION PHOTOS */
+/* SECTION PHOTO */
 
-        .photo-section {
-            max-width: 1000px;
-            margin: 45px auto;
-            padding: 20px;
-            text-align: center;
-        }
+.photo-section {
+    max-width: 1000px;
+    margin: 45px auto;
+    padding: 20px;
+    text-align: center;
+}
 
-        .photo-section h2 {
-            color: #0b3d91;
-            font-size: 30px;
-            margin-bottom: 25px;
-        }
+.photo-section h2 {
+    color: #0b3d91;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
 
-        /* CARROUSEL */
+/* CADRE PHOTO */
 
-        .photo-slider {
-            position: relative;
-            width: 100%;
-            max-width: 850px;
-            height: 430px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 20px;
-            background: #111;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.18);
-        }
+.photo-slider {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    height: 430px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #111;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
 
-        .photo {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+/* IMAGE */
 
-            opacity: 0;
+.photo-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-            animation: photoAnimation 16s infinite;
-        }
+    width: 100% !important;
+    height: 100% !important;
 
-        .photo:nth-child(1) {
-            animation-delay: 0s;
-        }
+    max-width: none !important;
+    max-height: none !important;
 
-        .photo:nth-child(2) {
-            animation-delay: 4s;
-        }
+    object-fit: cover;
 
-        .photo:nth-child(3) {
-            animation-delay: 8s;
-        }
+    opacity: 0;
+    transform: translateY(100%);
 
-        .photo:nth-child(4) {
-            animation-delay: 12s;
-        }
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
 
-        @keyframes photoAnimation {
+/* IMAGE ACTIVE */
 
-            0% {
-                opacity: 0;
-                transform: translateY(100%);
-            }
+.photo-slider img.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-            5% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+/* TEXTE */
 
-            25% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+.photo-description {
+    margin-top: 20px;
+    color: #0b3d91;
+    font-weight: bold;
+    font-size: 17px;
+}
 
-            30% {
-                opacity: 0;
-                transform: translateY(-100%);
-            }
+/* CARTES */
 
-            100% {
-                opacity: 0;
-                transform: translateY(-100%);
-            }
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
 
-        }
+.card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
 
-        .photo-description {
-            margin-top: 20px;
-            color: #0b3d91;
-            font-weight: bold;
-            font-size: 17px;
-        }
+.card h2 {
+    color: #0b5ed7;
+    margin-bottom: 15px;
+}
 
-        /* CARTES */
+.card p {
+    margin-bottom: 15px;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
+/* SERVICES */
 
-        .card {
-            background: white;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-        }
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+}
 
-        .card h2 {
-            color: #0b5ed7;
-            margin-bottom: 15px;
-        }
+.skill {
+    background: #eaf2ff;
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        .card p {
-            margin-bottom: 15px;
-        }
+.skill:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
 
-        /* SERVICES */
+/* BOUTONS */
 
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 18px;
-        }
+.button {
+    display: inline-block;
+    background: #0b5ed7;
+    color: white;
+    padding: 13px 23px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+}
 
-        .skill {
-            background: #eaf2ff;
-            padding: 22px;
-            border-radius: 12px;
-            text-align: center;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.whatsapp {
+    background: #25D366;
+    margin-left: 8px;
+}
 
-        .skill:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-        }
+/* FOOTER */
 
-        /* BOUTONS */
+footer {
+    background: #101828;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
 
-        .button {
-            display: inline-block;
-            background: #0b5ed7;
-            color: white;
-            padding: 13px 23px;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 10px;
-            font-weight: bold;
-        }
+/* MOBILE */
 
-        .button:hover {
-            background: #084298;
-        }
+@media (max-width: 600px) {
 
-        .whatsapp {
-            background: #25D366;
-            margin-left: 8px;
-        }
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 
-        .whatsapp:hover {
-            background: #128C7E;
-        }
+    header h1 {
+        font-size: 30px;
+    }
 
-        /* FOOTER */
+    .photo-slider {
+        height: 280px;
+    }
 
-        footer {
-            background: #101828;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-        }
+    .card {
+        padding: 22px;
+    }
 
-        /* MOBILE */
+    .button {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
 
-        @media (max-width: 600px) {
+}
 
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-
-            header h1 {
-                font-size: 30px;
-            }
-
-            .photo-slider {
-                height: 280px;
-            }
-
-            .card {
-                padding: 22px;
-            }
-
-            .button {
-                display: block;
-                text-align: center;
-                margin: 10px 0;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -272,251 +240,233 @@
 <body>
 
 
-    <!-- NAVIGATION -->
+<!-- NAVIGATION -->
 
-    <nav>
+<nav>
 
-        <a href="index.html">🏠 Accueil</a>
+<a href="index.html">🏠 Accueil</a>
 
-        <a href="entreprise.html">🏢 Entreprise</a>
+<a href="entreprise.html">🏢 Entreprise</a>
 
-        <a href="informaticien.html">👨‍💻 Informaticien</a>
+<a href="informaticien.html">👨‍💻 Informaticien</a>
 
-    </nav>
+</nav>
 
 
-    <!-- HEADER -->
+<!-- HEADER -->
 
-    <header>
+<header>
 
-        <h1>👨‍💻 Je suis informaticien</h1>
+<h1>👨‍💻 Je suis informaticien</h1>
 
-        <p>
-            MABONDA KIFWAMBA ZEPHYRIN
-        </p>
+<p>MABONDA KIFWAMBA ZEPHYRIN</p>
 
-    </header>
+</header>
 
 
-    <!-- ANIMATION DES PHOTOS -->
+<!-- PHOTOS -->
 
-    <section class="photo-section">
+<section class="photo-section">
 
-        <h2>💻 Mon univers informatique</h2>
+<h2>💻 Mon univers informatique</h2>
 
 
-        <div class="photo-slider">
+<div class="photo-slider">
 
+<img
+src="développement.png"
+class="photo active"
+alt="Développement web"
+>
 
-            <!-- PHOTO 1 -->
+<img
+src="réseaux.png"
+class="photo"
+alt="Réseaux informatiques"
+>
 
-            <img
-                src="développement.png"
-                class="photo"
-                alt="Développement web"
-            >
+<img
+src="maintenance.png"
+class="photo"
+alt="Maintenance informatique"
+>
 
+<img
+src="cybersecurite.png"
+class="photo"
+alt="Cybersécurité"
+>
 
-            <!-- PHOTO 2 -->
+</div>
 
-            <img
-                src="réseaux.png"
-                class="photo"
-                alt="Réseaux informatiques"
-            >
 
+<p class="photo-description">
 
-            <!-- PHOTO 3 -->
+🌐 Développement web • 🖧 Réseaux • 🔧 Maintenance • 🔐 Cybersécurité
 
-            <img
-                src="maintenance.png"
-                class="photo"
-                alt="Maintenance informatique"
-            >
+</p>
 
+</section>
 
-            <!-- PHOTO 4 -->
 
-            <img
-                src="cybersecurite.png"
-                class="photo"
-                alt="Cybersécurité"
-            >
+<!-- CONTENU -->
 
+<main class="container">
 
-        </div>
 
+<section class="card">
 
-        <p class="photo-description">
-            🌐 Développement web • 🖧 Réseaux • 🔧 Maintenance • 🔐 Cybersécurité
-        </p>
+<h2>👨‍💻 Qui suis-je ?</h2>
 
-    </section>
+<p>
 
+Je suis <strong>MABONDA KIFWAMBA ZEPHYRIN</strong>,
+étudiant en informatique et passionné par les technologies.
 
-    <!-- CONTENU -->
+Je m'intéresse particulièrement aux réseaux informatiques,
+au développement web et à la maintenance informatique.
 
-    <main class="container">
+</p>
 
+<p>
 
-        <!-- QUI SUIS-JE -->
+Mon objectif est de développer mes compétences
+et de construire progressivement mon parcours
+dans le domaine informatique.
 
-        <section class="card">
+</p>
 
-            <h2>👨‍💻 Qui suis-je ?</h2>
+</section>
 
-            <p>
 
-                Je suis
-                <strong>MABONDA KIFWAMBA ZEPHYRIN</strong>,
-                étudiant en informatique et passionné par les technologies.
+<section class="card">
 
-                Je m'intéresse particulièrement aux réseaux informatiques,
-                au développement web et à la maintenance informatique.
+<h2>🛠️ Mes services</h2>
 
-            </p>
+<div class="skills">
 
-            <p>
+<div class="skill">
+🌐 Développement web
+</div>
 
-                Mon objectif est de développer mes compétences
-                et de construire progressivement mon parcours
-                dans le domaine informatique.
+<div class="skill">
+🖧 Réseaux informatiques
+</div>
 
-            </p>
+<div class="skill">
+🔧 Maintenance informatique
+</div>
 
-        </section>
+<div class="skill">
+🔐 Cybersécurité
+</div>
 
+<div class="skill">
+🛠️ Assistance technique
+</div>
 
-        <!-- SERVICES -->
+</div>
 
-        <section class="card">
+</section>
 
-            <h2>🛠️ Mes services</h2>
 
+<section class="card">
 
-            <div class="skills">
+<h2>🎯 Mon objectif</h2>
 
+<p>
 
-                <div class="skill">
+Mon objectif est de devenir un informaticien compétent,
+capable de concevoir, installer, maintenir et sécuriser
+des solutions informatiques adaptées aux besoins des utilisateurs.
 
-                    🌐 Développement web
+</p>
 
-                </div>
+<p>
 
+Je souhaite continuer à apprendre, développer mes compétences
+et évoluer dans le domaine des réseaux, du développement web
+et des technologies informatiques.
 
-                <div class="skill">
+</p>
 
-                    🖧 Réseaux informatiques
+</section>
 
-                </div>
 
+<section class="card">
 
-                <div class="skill">
+<h2>📞 Me contacter</h2>
 
-                    🔧 Maintenance informatique
+<p>
 
-                </div>
+Vous souhaitez échanger avec moi, poser une question
+ou discuter d'un projet informatique ?
 
+N'hésitez pas à me contacter.
 
-                <div class="skill">
+</p>
 
-                    🔐 Cybersécurité
+<a
+href="mailto:zephyrinmabonda767@gmail.com"
+class="button">
 
-                </div>
+📧 E-mail
 
+</a>
 
-                <div class="skill">
 
-                    🛠️ Assistance technique
+<a
+href="https://api.whatsapp.com/send?phone=243835921390"
+class="button whatsapp"
+target="_blank">
 
-                </div>
+💬 WhatsApp
 
+</a>
 
-            </div>
+</section>
 
-        </section>
 
+</main>
 
-        <!-- OBJECTIF -->
 
-        <section class="card">
+<footer>
 
-            <h2>🎯 Mon objectif</h2>
+<p>
+© 2026 MABONDA KIFWAMBA ZEPHYRIN -
+Tous droits réservés.
+</p>
 
-            <p>
+</footer>
 
-                Mon objectif est de devenir un informaticien compétent,
-                capable de concevoir, installer, maintenir et sécuriser
-                des solutions informatiques adaptées aux besoins
-                des utilisateurs.
 
-            </p>
+<!-- ANIMATION DES PHOTOS -->
 
-            <p>
+<script>
 
-                Je souhaite continuer à apprendre,
-                développer mes compétences et évoluer dans le domaine
-                des réseaux, du développement web et des technologies
-                informatiques.
+const photos = document.querySelectorAll(".photo");
 
-            </p>
+let currentPhoto = 0;
 
-        </section>
+function showNextPhoto() {
 
+    photos[currentPhoto].classList.remove("active");
 
-        <!-- CONTACT -->
+    currentPhoto++;
 
-        <section class="card">
+    if (currentPhoto >= photos.length) {
+        currentPhoto = 0;
+    }
 
-            <h2>📞 Me contacter</h2>
+    photos[currentPhoto].classList.add("active");
 
-            <p>
+}
 
-                Vous souhaitez échanger avec moi,
-                poser une question ou discuter d'un projet informatique ?
+setInterval(showNextPhoto, 4000);
 
-                N'hésitez pas à me contacter.
-
-            </p>
-
-
-            <a
-                href="mailto:zephyrinmabonda767@gmail.com"
-                class="button">
-
-                📧 E-mail
-
-            </a>
-
-
-            <a
-                href="https://api.whatsapp.com/send?phone=243835921390"
-                class="button whatsapp"
-                target="_blank">
-
-                💬 WhatsApp
-
-            </a>
-
-
-        </section>
-
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            © 2026 MABONDA KIFWAMBA ZEPHYRIN -
-            Tous droits réservés.
-        </p>
-
-    </footer>
+</script>
 
 
 </body>
 
-</html>
+    </html>
