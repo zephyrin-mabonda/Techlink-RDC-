@@ -2,21 +2,18 @@
 <html lang="fr">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Informaticien | TechLink RDC</title>
+    <title>TechLink RDC | Informaticien</title>
 
     <style>
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
+            box-sizing: border-box;
         }
 
         body {
@@ -51,19 +48,19 @@
             background: linear-gradient(135deg, #0b3d91, #00a8ff);
             color: white;
             text-align: center;
-            padding: 55px 20px;
+            padding: 50px 20px;
         }
 
         header h1 {
-            font-size: 40px;
+            font-size: 38px;
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 19px;
+            font-size: 18px;
         }
 
-        /* CARROUSEL PHOTO */
+        /* SECTION PHOTOS */
 
         .photo-section {
             max-width: 1000px;
@@ -74,9 +71,11 @@
 
         .photo-section h2 {
             color: #0b3d91;
-            margin-bottom: 25px;
             font-size: 30px;
+            margin-bottom: 25px;
         }
+
+        /* CARROUSEL */
 
         .photo-slider {
             position: relative;
@@ -86,8 +85,8 @@
             margin: auto;
             overflow: hidden;
             border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             background: #111;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.18);
         }
 
         .photo {
@@ -95,8 +94,10 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+
             opacity: 0;
-            animation: changement 16s infinite;
+
+            animation: photoAnimation 16s infinite;
         }
 
         .photo:nth-child(1) {
@@ -115,44 +116,43 @@
             animation-delay: 12s;
         }
 
-        @keyframes changement {
+        @keyframes photoAnimation {
 
             0% {
                 opacity: 0;
-                transform: scale(1.08);
+                transform: translateY(100%);
             }
 
             5% {
                 opacity: 1;
-                transform: scale(1);
+                transform: translateY(0);
             }
 
             25% {
                 opacity: 1;
-                transform: scale(1.03);
+                transform: translateY(0);
             }
 
             30% {
                 opacity: 0;
-                transform: scale(1.08);
+                transform: translateY(-100%);
             }
 
             100% {
                 opacity: 0;
+                transform: translateY(-100%);
             }
 
         }
 
-        /* TEXTE SUR LES PHOTOS */
-
-        .photo-title {
+        .photo-description {
             margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
             color: #0b3d91;
+            font-weight: bold;
+            font-size: 17px;
         }
 
-        /* CONTENU */
+        /* CARTES */
 
         .container {
             max-width: 1000px;
@@ -163,7 +163,7 @@
         .card {
             background: white;
             padding: 30px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
         }
@@ -195,27 +195,25 @@
         }
 
         .skill:hover {
-            transform: translateY(-7px);
+            transform: translateY(-6px);
             box-shadow: 0 8px 18px rgba(0,0,0,0.12);
         }
 
-        /* BOUTON */
+        /* BOUTONS */
 
         .button {
             display: inline-block;
             background: #0b5ed7;
             color: white;
-            padding: 14px 25px;
+            padding: 13px 23px;
             text-decoration: none;
             border-radius: 8px;
             margin-top: 10px;
             font-weight: bold;
-            transition: 0.3s;
         }
 
         .button:hover {
             background: #084298;
-            transform: translateY(-3px);
         }
 
         .whatsapp {
@@ -250,10 +248,6 @@
                 font-size: 30px;
             }
 
-            header {
-                padding: 45px 15px;
-            }
-
             .photo-slider {
                 height: 280px;
             }
@@ -274,7 +268,11 @@
 
 </head>
 
+
 <body>
+
+
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -287,6 +285,8 @@
     </nav>
 
 
+    <!-- HEADER -->
+
     <header>
 
         <h1>👨‍💻 Je suis informaticien</h1>
@@ -298,25 +298,35 @@
     </header>
 
 
-    <!-- ANIMATION AVEC PHOTOS -->
+    <!-- ANIMATION DES PHOTOS -->
 
     <section class="photo-section">
 
         <h2>💻 Mon univers informatique</h2>
 
+
         <div class="photo-slider">
 
+
+            <!-- PHOTO 1 -->
+
             <img
-                src="developpement.png"
+                src="développement.png"
                 class="photo"
                 alt="Développement web"
             >
 
+
+            <!-- PHOTO 2 -->
+
             <img
-                src="reseaux.png"
+                src="réseaux.png"
                 class="photo"
                 alt="Réseaux informatiques"
             >
+
+
+            <!-- PHOTO 3 -->
 
             <img
                 src="maintenance.png"
@@ -324,121 +334,178 @@
                 alt="Maintenance informatique"
             >
 
+
+            <!-- PHOTO 4 -->
+
             <img
                 src="cybersecurite.png"
                 class="photo"
                 alt="Cybersécurité"
             >
 
+
         </div>
 
-        <p class="photo-title">
+
+        <p class="photo-description">
             🌐 Développement web • 🖧 Réseaux • 🔧 Maintenance • 🔐 Cybersécurité
         </p>
 
     </section>
 
 
+    <!-- CONTENU -->
+
     <main class="container">
 
+
+        <!-- QUI SUIS-JE -->
 
         <section class="card">
 
             <h2>👨‍💻 Qui suis-je ?</h2>
 
             <p>
+
                 Je suis
                 <strong>MABONDA KIFWAMBA ZEPHYRIN</strong>,
                 étudiant en informatique et passionné par les technologies.
+
                 Je m'intéresse particulièrement aux réseaux informatiques,
                 au développement web et à la maintenance informatique.
+
             </p>
 
             <p>
-                Mon objectif est de développer mes compétences et de construire
-                progressivement mon parcours dans le domaine informatique.
+
+                Mon objectif est de développer mes compétences
+                et de construire progressivement mon parcours
+                dans le domaine informatique.
+
             </p>
 
         </section>
 
 
+        <!-- SERVICES -->
+
         <section class="card">
 
             <h2>🛠️ Mes services</h2>
 
+
             <div class="skills">
 
+
                 <div class="skill">
+
                     🌐 Développement web
+
                 </div>
 
+
                 <div class="skill">
+
                     🖧 Réseaux informatiques
+
                 </div>
 
+
                 <div class="skill">
+
                     🔧 Maintenance informatique
+
                 </div>
 
+
                 <div class="skill">
+
                     🔐 Cybersécurité
+
                 </div>
 
+
                 <div class="skill">
+
                     🛠️ Assistance technique
+
                 </div>
+
 
             </div>
 
         </section>
 
 
+        <!-- OBJECTIF -->
+
         <section class="card">
 
             <h2>🎯 Mon objectif</h2>
 
             <p>
+
                 Mon objectif est de devenir un informaticien compétent,
                 capable de concevoir, installer, maintenir et sécuriser
-                des solutions informatiques adaptées aux besoins des utilisateurs.
+                des solutions informatiques adaptées aux besoins
+                des utilisateurs.
+
             </p>
 
             <p>
-                Je souhaite continuer à apprendre, développer mes compétences
-                et évoluer dans le domaine des réseaux, du développement web
-                et des technologies informatiques.
+
+                Je souhaite continuer à apprendre,
+                développer mes compétences et évoluer dans le domaine
+                des réseaux, du développement web et des technologies
+                informatiques.
+
             </p>
 
         </section>
 
+
+        <!-- CONTACT -->
 
         <section class="card">
 
             <h2>📞 Me contacter</h2>
 
             <p>
-                Vous souhaitez échanger avec moi, poser une question ou discuter
-                d'un projet informatique ? N'hésitez pas à me contacter.
+
+                Vous souhaitez échanger avec moi,
+                poser une question ou discuter d'un projet informatique ?
+
+                N'hésitez pas à me contacter.
+
             </p>
+
 
             <a
                 href="mailto:zephyrinmabonda767@gmail.com"
                 class="button">
+
                 📧 E-mail
+
             </a>
+
 
             <a
                 href="https://api.whatsapp.com/send?phone=243835921390"
                 class="button whatsapp"
                 target="_blank">
+
                 💬 WhatsApp
+
             </a>
+
 
         </section>
 
 
     </main>
 
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -448,6 +515,7 @@
         </p>
 
     </footer>
+
 
 </body>
 
